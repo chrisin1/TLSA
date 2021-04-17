@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #151C48; */
+  font-family: Montserrat;
+  color: #f4ba00;
+}
+
+body {
+  padding: 2rem;
+  background-color: #151C48;
+}
+
+.body-other {
+  padding: 2rem;
+  background-color: white;
+}
+
+.btn{
+  color: #151C48;
+  background-color: #f4ba00;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+}
+
+.create-event-disclaimer{
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-create{
+  color: #151C48;
+  background-color: #f4ba00;
+  border-radius: 15px;
+  padding: 6px;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-align: center;
+  font-size: 26px;
+}
+
+.btn-smaller{
+  color: #151C48;
+  background-color: #f4ba00;
+  border-radius: 15px;
+  padding: 5px;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-align: center;
+  font-size: 16px;
+}
+
+.login-btn-position {
+  position: absolute;
+  top: 75vh; /* vh = viewport height, aka window height*/
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+}
+
+.landing-header {
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: left;
+  position: absolute;
+  top: 25vh;
+  left: 48vw;
+  padding: 0vw 10vw 0vw 0vw
+}
+
+.landing-logo img{
+  position:absolute;
+  top: 25vh;
+  right: 60vw;
+  width: 250px;
+}
+
+.appbar-logo {
+  float: left !important;
+  margin-top: -15px !important;
+}
+
+.center {
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
+
+.calendarEmbedWrapper {
+    width: 80%;
+    min-height: 300px;
+    margin-left: 10%;
+    position: relative;
+}
+.calendarEmbed,.calendarEmbedBlocker {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.calendarEmbedBlocker {
+    background-color: #e15151;
+}
+.calendarEmbedBlocker p {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 19%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.nav-menu {
+    font-family: Montserrat;
+    color: #f4ba00;
+    font-size: 25px;
+}
+
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
