@@ -14,7 +14,7 @@ mongoose.connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: tru
 
 //since mongoose promise is depreciated, we overide it with node's promise
 mongoose.Promise = global.Promise;
-
+app.use('/', express.static(path.join(__dirname, "..", 'client/build')));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 // Use env port or default
 const port = process.env.PORT || 5000;
 
-app.use('/', express.static(path.join(__dirname, "..", 'client/build')));
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client/build", "index.html"));
  });
