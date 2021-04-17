@@ -40,9 +40,11 @@ app.use((req, res, next) => {
 // Use env port or default
 const port = process.env.PORT || 5000;
 
-app.use((req, res, next) => {
+app.use('/', express.static(path.join(__dirname, "..", 'client/build')));
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client/build", "index.html"));
-});
+ });
+ 
 console.log(path.join(path.join(__dirname, "..", "client/build")));
 
 //console.log(__dirname);
