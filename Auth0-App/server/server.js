@@ -4,7 +4,7 @@ const routes = require("./routes/server.routes");
 const config = require("./config/config");
 const mongoose = require("mongoose");
 const app = express();
-
+const path = require("path")
 //connect to the database
 mongoose.set('useFindAndModify', false);
 
@@ -40,4 +40,7 @@ app.use((req, res, next) => {
 // Use env port or default
 const port = process.env.PORT || 5000;
 
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+});
 app.listen(port, () => console.log(`Server now running on port ${port}!`));
