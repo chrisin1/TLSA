@@ -43,9 +43,6 @@ app.get('*', (req, res) => {
 // Use env port or default
 const port = process.env.PORT || 5000;
 
-
-
- 
 console.log(path.join(path.join(__dirname, "..", "client/build")));
 
 //console.log(__dirname);
