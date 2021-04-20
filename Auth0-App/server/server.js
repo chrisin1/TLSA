@@ -5,6 +5,7 @@ const config = require("./config/config");
 const mongoose = require("mongoose");
 const app = express();
 const path = require("path")
+//const cors = require("cors");
 //connect to the database
 mongoose.set('useFindAndModify', false);
 
@@ -34,7 +35,7 @@ app.use((err, req, res, next) => {
 });
 
 app.use((req, res, next) => {
-  res.send("TEST");
+  //res.send("TEST");
   next();
 });
 app.get('*', (req, res) => {
