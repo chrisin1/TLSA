@@ -28,7 +28,7 @@ const CheckIn = () => {
         redirect: 'follow'
       };
       
-      fetch("http://localhost:5000/api/users/"+ id +"/inc", requestOptions)
+      fetch("https://tlsa-app.herokuapp.com/api/users/"+ id +"/inc", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .then(alert("Check-in successful!"))
@@ -50,7 +50,7 @@ const CheckIn = () => {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:5000/api/events/attend", requestOptions)
+    fetch("https://tlsa-app.herokuapp.com/api/events/attend", requestOptions)
       .then(response => response.json())
       .then((result) => {
         incrementPts(result.nModified); console.log(result);

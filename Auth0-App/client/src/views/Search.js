@@ -14,7 +14,7 @@ const Search = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/users/name/" + searchName, requestOptions)
+    fetch("https://tlsa-app.herokuapp.com/api/users/name/" + searchName, requestOptions)
       .then((response) => response.text())
       .then((result) => setResults(JSON.parse(result)))
       .catch((error) => console.log("error", error));
@@ -27,7 +27,7 @@ const Search = () => {
     };
 
     await fetch(
-      "http://localhost:5000/api/users/" + searchID + "/reset",
+      "https://tlsa-app.herokuapp.com/api/users/" + searchID + "/reset",
       requestOptions
     )
       .then((response) => response.text())
