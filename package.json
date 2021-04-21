@@ -20,7 +20,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run client && npm run server",
+    "start": "cd Auth0-App/server && node server.js",
     "server": "cd Auth0-App/server && node server.js",
     "client": "cd Auth0-App/client && npm start",
     "heroku-postbuild": "cd 'Auth0-App/client' && rm -rf node_modules && npm install && npm run build",
