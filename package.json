@@ -9,6 +9,7 @@
     "yarn": "1.5.1"
   },
   "dependencies": {
+    "nodemon": "^1.18.10",
     "body-parser": "^1.19.0",
     "concurrently": "^6.0.2",
     "express": "^4.17.1",
@@ -20,11 +21,13 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run client && npm run server",
-    "server": "cd Auth0-App/server && npm start",
+    "install-all": "concurrently \"cd Auth0-App/server && npm install\" \"cd Auth0-App/client && npm install\"",
     "client": "cd Auth0-App/client && npm start",
-    "heroku-postbuild": "cd 'Auth0-App/client' && rm -rf node_modules && npm install && npm run build",
-    "install-all": "cd 'Auth0-App/server' && npm i && cd 'Auth0-App/client' && npm i"
+    "server": "nodemon Auth0-App/server/server.js",
+    "dev": "concurrently \"nodemon Auth0-App/server/server.js\" \"cd Auth0-App/client && npm run start\"",
+    "build": "cd Auth0-App/client && npm build",
+    "start": "node Auth0-App/server/server.js",
+    "heroku-postbuild": "cd  Auth0-App/server && npm install && cd Auth0-App/client && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
     "type": "git",
