@@ -23,7 +23,7 @@
     "start": "npm run client && npm run server",
     "server": "cd Auth0-App/server && node server.js",
     "client": "cd Auth0-App/client && npm start",
-    "heroku-postbuild": "cd 'Auth0-App/client' && rm -rf node_modules && npm install",
+    "heroku-postbuild": "cd 'Auth0-App/client' && rm -rf node_modules && npm install && npm run build",
     "install-all": "npm i && cd 'Auth0-App/client' && npm i"
   },
   "repository": {
